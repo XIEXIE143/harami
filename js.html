@@ -9,12 +9,22 @@
     
     <button onclick="aloha()">CLICK ME!</button>
     
-    <img id="gazo" src="harami.jpg">
+    <img id="gazo" src="harami.jpg" onclick="aloha()">
 
     <script>
-      function aloha(){
+      let num = 0
+      
+	    function aloha(){
+
+    const files = ['harami.jpg', 'harami2.jpg', 'harami3.jpg']
+      
+	  num++
+	if( num >=files.length ){
+	 num = 0
+		    }
       let gazo = document.getElementById('gazo')
-      gazo.src = 'harami2.jpg'
+
+      gazo.src = files[num]
     }
     </script>
   </body>
